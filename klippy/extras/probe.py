@@ -251,6 +251,7 @@ class ProbePointsHelper:
         self.busy = self.manual_probe = False
         self.gcode = self.toolhead = None
         # Probe accuracy checks:
+        # 2DO rewrite the ac_thresh and ac_retry
         self.probe_ac_thresh = config.getfloat('probe_ac_thresh', 0.1)
         self.probe_ac_retry = config.getint('probe_ac_retry', 1)
     def minimum_points(self,n):
